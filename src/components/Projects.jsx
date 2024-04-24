@@ -1,86 +1,91 @@
-import React from 'react'
-import ott from '../assets/Ott.png'
-import Crud_app from '../assets/Crud_app.png'
-import assistant from '../assets/assistant.png'
-import aiplayground from '../assets/aiplayground.png'
-import cineflicks from '../assets/cineflicks.png'
-import experio from '../assets/experio.png'
+import React from 'react';
+import assistant from '../assets/assistant.png';
+import cineflicks from '../assets/cineflicks.png';
+import experio from '../assets/experio.png';
+import k3sCluster from '../assets/k3sCluster.png';
+import library_discord_bot from '../assets/library_discord_bot.png';
 
 const Projects = () => {
-
     const projects = [
         {
             id: 1,
-            src: cineflicks,
-            para: `Many youngsters when bored start browsing for good series or movies and end up surfing with messy
-            recommendations.
-            So, I have built an app which gives the basic info of the trending movies or series, its cast and even an option to
-            watch its trailer.`,
-            link: "https://rahuls-cineflicks.netlify.app/"
+            src: k3sCluster,
+            para: [
+                'Developed a monitoring solution using Docker, Kubernetes, Grafana, Prometheus on an on-premise k3s cluster.',
+                'Implemented the cluster on Raspberry Pi for efficient resource management and performance tracking.',
+                'Enabled enhanced visibility and control over system metrics and performance through real-time monitoring and visualization.'
+            ],
+            link: 'https://github.com/Rahul-500/k3s-deployment-configs'
         },
         {
             id: 2,
-            src: experio,
-            para: `This is a team project of 4 members, this app is a User Generated Website where user himself will build this app by
-            sharing his/her experience in any category through blogs.
-            This app is basically a full-fledge website with both frontend and backend technology (MERN STACK) .`,
-            link: "https://experiio.netlify.app/"
+            src: library_discord_bot,
+            para: [
+                'Created a Discord bot for managing the company’s library and facilitating employee interactions.',
+                'Developed a CI/CD pipeline with GitHub Actions for automated testing and deployment as a Docker container.',
+                'Improved efficiency and workflow through streamlined application management.'
+            ],
+            link: 'https://github.com/Rahul-500/library-bot'
         },
         {
             id: 3,
-            src: aiplayground,
-            para: `This is a team project of 3 members, this app provides variety of AI options through which users can get a better
-            understanding of how AI can do amazing things. Like Chatgpt, Image generator , Image colorization and Programming memes generator.`,
-            link: "https://ai-playground-rsp.netlify.app/"
+            src: cineflicks,
+            para: [
+                'Built an app that provides basic info of trending movies or series, including cast and trailers.',
+                'Helps users easily find quality content without browsing through messy recommendations.'
+            ],
+            link: 'https://rahuls-cineflicks.netlify.app/'
         },
         {
             id: 4,
-            src: Crud_app,
-            para: `This CRUD web application works like a Minimal Social Media App. This App helps the user to Create , Read, Update and Delete their Posts just like other Social Media app. I have also included the Search field which allows the user to Read and like the Posts of his/her Specific Interest..!!`,
-            link: "https://crud-app-byrahul.netlify.app/"
+            src: experio,
+            para: [
+                'Team project involving a User Generated Website where users share their experiences through blogs.',
+                'Built with MERN stack technologies and offers a full-fledged website experience.'
+            ],
+            link: 'https://experiio.netlify.app/'
         },
         {
             id: 5,
             src: assistant,
-            para: `So, this Model works like a 'Google Assistant' in Android or 'Siri' in Iphone does. I have built this Model with the help of AI and Deep Learning Techniques and the Python Libraries Associated with it. The Complete Description of this model in the form of video is already there in my Youtube Channel.`,
-            link: "https://youtu.be/JZdBRuTAVkg" 
+            para: [
+                'Built an AI-based model similar to Google Assistant or Siri.',
+                'Utilized deep learning techniques and Python libraries.',
+                'Complete description available in a video on my YouTube channel.'
+            ],
+            link: 'https://youtu.be/JZdBRuTAVkg'
         },
-        {
-            id: 6,
-            src: ott,
-            para: `So, these days as we surfer more on OTT Platforms and try to find some good Movies/Series, we end up in a Confusion, What to Watch.?
-            Therefore, I have Built this Application which Provides/Tells the User, the List of Popular Movies or Series Trending right on that day on the Respective Platform Selected by the User.`,
-            link: "https://youtu.be/orpezAQs8kk" 
-        },
-        
     ];
 
-
-  return (
-    <div name='projects' className='bg-gradient-to-b from-black via-black to-gray-800 w-full text-white'>
-      <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
-        <div className='pb-8'>
-            <p className='text-4xl font-bold inline border-b-4 border-gray-500 text-blue-300'>My Projects</p>
-            <p className='py-10'>Check out some of my work right here</p>
-        </div>
-
-
-        <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
-        {
-            projects.map(({id, src, para,  link}) => (
-                <div key={id}  className='shadow-md shadow-gray-600 rounded-lg'>
-                    <img src={src} alt=""  className='rounded-md duration-300 hover:scale-105'/>
-                    <p className='px-5 py-4 text-sm'>{para}</p>
-                    <div className='flex items-center justify-center'>
-                        <a href={link} target='_blank' rel='noreferrer' className='text-white rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer px-6 py-1 m-4 duration-200 hover:scale-105'>Demo</a>
-                    </div>
+    return (
+        <div name='projects' className='bg-gradient-to-b from-black via-black to-gray-800 w-full text-white'>
+            <div className='max-w-screen-xl p-6 mx-auto flex flex-col justify-center w-full h-full'>
+                <div className='pb-8'>
+                    <h2 className='text-4xl font-bold inline border-b-4 border-gray-500 text-blue-300'>My Projects</h2>
+                    <p className='py-6'>Check out some of my work right here:</p>
                 </div>
-            ))
-        }
+                <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-12 px-12 sm:px-0'>
+                    {projects.map(({ id, src, para, link }) => (
+                        <div key={id} className='shadow-md shadow-gray-600 rounded-lg p-4'>
+                            <img src={src} alt="" className='rounded-md duration-300 hover:scale-105 transition-transform' />
+                            <div className='p-4'>
+                                <ul className='list-disc list-inside'>
+                                    {para.map((point, index) => (
+                                        <li key={index} className='mb-2'>{point}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <div className='flex items-center justify-center'>
+                                <a href={link} target='_blank' rel='noreferrer' className='text-white rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer px-6 py-2 duration-200 hover:scale-105 transition-transform'>
+                                    Demo
+                                </a>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  )
-}
+    );
+};
 
-export default Projects
+export default Projects;
