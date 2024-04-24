@@ -17,14 +17,18 @@ const Navbar = () => {
         },
         {
             id: 3,
-            link: 'projects',
+            link: 'experience',
         },
         {
             id: 4,
-            link: 'skills',
+            link: 'projects',
         },
         {
             id: 5,
+            link: 'skills',
+        },
+        {
+            id: 6,
             link: 'contact',
         },
         
