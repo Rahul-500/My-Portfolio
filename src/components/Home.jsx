@@ -34,10 +34,9 @@ const Home = () => {
                     <img
                         src={Rahul}
                         alt="my profile"
-                        className='rounded-full border-4 border-cyan-500 shadow-xl shadow-cyan-500/50 mx-auto w-2/3 md:w-2/3 lg:w-5/6 animate-fadeIn'
+                        className='rounded-full border-4 border-cyan-500 shadow-xl shadow-cyan-500/50 mx-auto w-2/3 md:w-2/3 lg:w-5/6 animate-fadeIn animate-zoomInOut'
                     />
                 </div>
-
             </div>
         </div>
     );
