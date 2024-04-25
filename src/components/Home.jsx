@@ -25,7 +25,7 @@ const Home = () => {
                 <div>
                     <img src={Rahul}
                         alt="my profile"
-                        className='rounded-full border-4 border-cyan-500 shadow-xl shadow-cyan-500/50 mx-auto w-2/3 md:w-1/2 lg:w-5/6 animate-fadeIn animate-zoomInOut mb-9 lg:mb-0' />
+                        className='z-10 rounded-full border-4 border-cyan-500 shadow-xl shadow-cyan-500/50 mx-auto w-2/3 md:w-1/2 lg:w-5/6 animate-fadeIn animate-zoomInOut mb-9 lg:mb-0' />
                 </div>
             </div>
         </div>
